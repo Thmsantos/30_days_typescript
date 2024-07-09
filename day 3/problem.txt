@@ -1,0 +1,25 @@
+2704. Ser ou não ser
+
+
+Escreva uma função expect que ajude os desenvolvedores a testar seus códigos. Ela deve receber qualquer valor val e retornar um objeto com as duas funções a seguir:
+
+toBe(val) aceita outro valor e retorna true se os dois valores === são iguais. Se não forem iguais, deve lançar um erro "Not Equal".
+notToBe(val) aceita outro valor e retorna true se os dois valores !== são iguais. Se forem iguais, deve lançar um erro "Equal".
+
+Exemplo 1:
+
+Entrada: func = () => expect(5).toBe(5)
+Saída: {"value": true}
+Explicação: 5 === 5, então esta expressão retorna verdadeiro.
+
+Exemplo 2:
+
+Entrada: func = () => expect(5).toBe(null)
+Saída: {"error": "Not Equal"}
+Explicação: 5 !== null então esta expressão gera o erro "Not Equal".
+
+Exemplo 3:
+
+Entrada: func = () => expect(5).notToBe(null)
+Saída: {"value": true}
+Explicação: 5 !== null, então esta expressão retorna true.
