@@ -1,0 +1,42 @@
+Enunciado
+
+Escreva uma função createHelloWorld. Esta função deve retornar uma nova função que sempre retorna "Hello World", independentemente dos argumentos passados para ela.
+
+Exemplo 1:
+
+Entrada: args = []
+Saída: "Hello World"
+
+Explicação:
+const f = createHelloWorld();
+f(); // "Hello World"
+
+A função retornada por createHelloWorld deve sempre retornar "Hello World".
+
+Exemplo 2:
+
+Entrada: args = [{}, null, 42]
+Saída: "Hello World"
+
+Explicação:
+const f = createHelloWorld();
+f({}, null, 42); // "Hello World"
+
+Qualquer argumento pode ser passado para a função, mas ela sempre deve retornar "Hello World".
+
+Restrições:
+
+0 <= args.length <= 10
+
+Implementação
+
+function createHelloWorld() {
+    return function() {
+        return "Hello World";
+    };
+}
+
+// Exemplos de uso
+const f = createHelloWorld();
+console.log(f()); // "Hello World"
+console.log(f({}, null, 42)); // "Hello World"
